@@ -10,7 +10,7 @@ npm i -g syncman
 
 ## Usage
 Make sure you have the following env variables set up:
-- `POSTMAN_API_KEY` - you can get it from here: https://<your-postman-subdomain>.postman.co/settings/me/api-keys
+- `POSTMAN_API_KEY` - you can get it from here: [https://your-postman-subdomain.postman.co/settings/me/api-keys](https://your-postman-subdomain.postman.co/settings/me/api-keys)
 - `POSTMAN_WORKSPACE_ID` - your Postman Workspace id
 
 You can do it by exporting them in your terminal:
