@@ -8,9 +8,13 @@ workflows:
     jobs:
       - npm-publisher/publish-from-package-version:
           name: Publish NPM Package
+          filters:
+            branches:
+              only:
+                - main
           post-publish-steps:
             - save_cache:
-                key: 'v1-node-cache-{{ .Branch }}-{{ checksum "package-lock.json" }}'
+                key: v1-node-cache-{{ .Branch }}-{{ checksum "package-lock.json" }}
                 paths:
                   - node_modules
           pre-publish-steps:
@@ -21,3 +25,4 @@ workflows:
             - run: npm install
             - run: npm run build
           publish-token-variable: NPM_TOKEN
+          push-git-tag: false
