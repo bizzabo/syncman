@@ -11,7 +11,8 @@
     "sync": "npm run build && node lib/index.js",
     "build": "tsc -p .",
     "prepublish": "npm run build",
-    "lint": "eslint \"src/**/*.ts\" --fix"
+    "lint": "eslint \"src/**/*.ts\"",
+    "lint:fix": "eslint \"src/**/*.ts\" --fix"
   },
   "bin": {
     "syncman": "./lib/index.js"
