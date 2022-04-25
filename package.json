@@ -1,6 +1,6 @@
 {
   "name": "syncman",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "CLI tool that syncs OAS files to Postman and generates Postman collections based on them",
   "main": "lib/index.js",
   "types": "lib/syncer.d.ts",
