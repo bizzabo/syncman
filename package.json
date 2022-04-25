@@ -1,6 +1,6 @@
 {
   "name": "syncman",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "CLI tool that syncs OAS files to Postman and generates Postman collections based on them",
   "main": "lib/index.js",
   "types": "lib/syncer.d.ts",
@@ -11,7 +11,8 @@
     "sync": "npm run build && node lib/index.js",
     "build": "tsc -p .",
     "prepublish": "npm run build",
-    "lint": "eslint \"src/**/*.ts\" --fix"
+    "lint": "eslint \"src/**/*.ts\"",
+    "lint:fix": "eslint \"src/**/*.ts\" --fix"
   },
   "bin": {
     "syncman": "./lib/index.js"
