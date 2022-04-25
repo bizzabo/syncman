@@ -1,13 +1,27 @@
 version: 2.1
 
-orbs: 
+orbs:
+  node: circleci/node@1.1
   npm-publisher: uraway/npm-publisher@0.2.0
+
+jobs:
+  lint:
+    executor:
+      name: node/default
+      tag: "16"
+    steps:
+      - checkout
+      - run: npm run lint
 
 workflows:
   build_publish:
     jobs:
+      - lint:
+          name: Lint
       - npm-publisher/publish-from-package-version:
           name: Publish NPM Package
+          requires:
+            - Lint
           filters:
             branches:
               only:
@@ -23,6 +37,5 @@ workflows:
                   - v1-node-cache-{{ .Branch }}-{{ checksum "package-lock.json"}}
                   - v1-node-cache-
             - run: npm install
-            - run: npm run build
           publish-token-variable: NPM_TOKEN
           push-git-tag: false

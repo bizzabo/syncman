@@ -10,8 +10,8 @@
   "scripts": {
     "sync": "npm run build && node lib/index.js",
     "build": "tsc -p .",
-    "release": "npm publish",
-    "prerelease": "npm run build"
+    "prepublish": "npm run build",
+    "lint": "echo \" it works! \""
   },
   "bin": {
     "syncman": "./lib/index.js"
@@ -37,5 +37,14 @@
     "@types/util.promisify": "^1.0.4",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bizzabo/syncman"
+  },
+  "keywords": [
+    "swagger",
+    "oas",
+    "postman"
+  ]
 }
