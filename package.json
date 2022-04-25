@@ -4,7 +4,9 @@
   "description": "CLI tool that syncs OAS files to Postman and generates Postman collections based on them",
   "main": "lib/index.js",
   "types": "lib/syncer.d.ts",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "sync": "npm run build && node lib/index.js",
     "build": "tsc -p .",
@@ -22,7 +24,7 @@
     "commander": "^9.1.0",
     "dotenv": "^16.0.0",
     "figlet": "^1.5.2",
-    "openapi-to-postmanv2": "^3.1.0",
+    "openapi-to-postmanv2": "^2.14.1",
     "ora": "^5.4.1",
     "util.promisify": "^1.1.1"
   },
